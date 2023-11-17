@@ -17,6 +17,7 @@ public class Producto1 {
     @Size(min = 4, max = 30, message = "El nombre del producto debe tener entre 4 y 30 letras.")
     private String nombre;
 
+    @Size(max=2500)
     private String categoria;
 
     @DecimalMin(value = "1.00", inclusive = true, message = "El precio del producto debe ser de al menos 1.00")
