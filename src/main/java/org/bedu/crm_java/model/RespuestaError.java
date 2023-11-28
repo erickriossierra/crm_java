@@ -5,8 +5,9 @@ import org.bedu.crm_java.model.builders.RespuestasErrorBuilder;
 import java.time.LocalDateTime;
 import java.util.Map;
 
+
 public class RespuestaError {
-     private final LocalDateTime timestamp = LocalDateTime.now();
+    private final LocalDateTime timestamp = LocalDateTime.now();
     private int estatus;
     private String mensaje;
     private Map<String, String> errores;
@@ -52,3 +53,5 @@ public class RespuestaError {
         this.ruta = ruta;
     }
 }
+
+

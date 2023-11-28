@@ -7,7 +7,13 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 import jakarta.validation.constraints.Size;
+import lombok.Builder;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
+@Data
+@Builder
+@RequiredArgsConstructor
 public class Visita {
     @PositiveOrZero(message = "El identificador de la visita no puede ser un número negativo.")
     private long id;
