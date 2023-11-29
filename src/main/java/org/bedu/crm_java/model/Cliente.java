@@ -7,19 +7,20 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.*;
-import lombok.Builder;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+
+@Data
 @Entity
 @Table(name = "Clientes")
-@Data
-//@Builder
-@RequiredArgsConstructor
+
+@NoArgsConstructor
 public class Cliente {
+    @PositiveOrZero(message = "El identificador no puede ser un número negativo")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @PositiveOrZero(message = "El identificador no puede ser un número negativo")
     private Long id;
 
     @Column(name = "nombre_cliente")
