@@ -9,7 +9,7 @@ import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 @Data
-@Builder
+//@Builder
 @RequiredArgsConstructor
 public class Etapa {
     @PositiveOrZero(message = "El identificador de la etapa no puede ser un número negativo")

@@ -13,7 +13,7 @@ import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 @Data
-@Builder
+//@Builder
 @RequiredArgsConstructor
 public class Venta {
     @PositiveOrZero(message = "El identificador de la venta no puede ser un número negativo")
