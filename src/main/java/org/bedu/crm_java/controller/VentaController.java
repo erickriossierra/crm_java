@@ -3,7 +3,7 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.bedu.crm_java.model.Venta;
+import org.bedu.crm_java.persistence.entities.Venta;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;

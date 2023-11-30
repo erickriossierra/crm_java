@@ -1,21 +1,18 @@
 package org.bedu.crm_java.model;
 
+
 import java.time.LocalDate;
 
-import jakarta.validation.constraints.DecimalMin;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.PastOrPresent;
-import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.PositiveOrZero;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 import lombok.Builder;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
+
 @Data
-//@Builder
+@Builder
 @RequiredArgsConstructor
-public class Producto1 {
+public class Producto {
     @PositiveOrZero(message = "El identificador del producto no puede ser un número negativo")
     private long id;
 
@@ -23,7 +20,6 @@ public class Producto1 {
     @Size(min = 4, max = 30, message = "El nombre del producto debe tener entre 4 y 30 letras.")
     private String nombre;
 
-    @Size(max=2500)
     private String categoria;
 
     @DecimalMin(value = "1.00", inclusive = true, message = "El precio del producto debe ser de al menos 1.00")

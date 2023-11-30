@@ -4,8 +4,7 @@ import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.bedu.crm_java.model.Etapa;
-import org.bedu.crm_java.repositorys.EtapaRepository;
+import org.bedu.crm_java.persistence.entities.Etapa;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -18,14 +17,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import lombok.RequiredArgsConstructor;
-
 @RestController
 @RequestMapping("/etapa")
-@RequiredArgsConstructor
 public class EtapaController {
-
-    private final EtapaRepository etapaRepository;
+ 
     
     @GetMapping
     public ResponseEntity <List<Etapa>> getEtapas(@RequestParam Long clienteid){
@@ -39,8 +34,7 @@ public class EtapaController {
 
     @PostMapping
     public ResponseEntity<Void> creaEtapa(@RequestBody Etapa etapa, @RequestParam Long clienteid){
-        Etapa etapaBD = etapaRepository.save(etapa);
-        return ResponseEntity.created(URI.create(etapaBD.getEtapaId().toString())).build();
+        return ResponseEntity.created(URI.create("")).build();
     }
 
     @PutMapping("/{etapaid}")

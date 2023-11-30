@@ -1,6 +1,6 @@
-package org.bedu.crm_java.repositorys;
+package org.bedu.crm_java.persistence.repositorys;
 
-import org.bedu.crm_java.model.Cliente;
+import org.bedu.crm_java.persistence.entities.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
