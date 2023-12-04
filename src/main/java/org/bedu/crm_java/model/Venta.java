@@ -2,9 +2,7 @@ package org.bedu.crm_java.model;
 
 import lombok.Builder;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -12,7 +10,6 @@ import jakarta.validation.constraints.*;
 
 @Data
 @Builder
-@RequiredArgsConstructor
 public class Venta {
     @PositiveOrZero(message = "El identificador de la venta no puede ser un número negativo")
     private Long id;

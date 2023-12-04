@@ -6,12 +6,10 @@ import java.time.LocalDate;
 import jakarta.validation.constraints.*;
 import lombok.Builder;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 
 @Data
 @Builder
-@RequiredArgsConstructor
 public class Producto {
     @PositiveOrZero(message = "El identificador del producto no puede ser un número negativo")
     private long id;

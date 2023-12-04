@@ -3,11 +3,9 @@ package org.bedu.crm_java.model;
 import jakarta.validation.constraints.*;
 import lombok.Builder;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 @Data
 @Builder
-@RequiredArgsConstructor
 public class Etapa {
     @PositiveOrZero(message = "El identificador de la etapa no puede ser un número negativo")
     private Long id;

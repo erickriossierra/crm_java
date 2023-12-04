@@ -42,7 +42,7 @@ public class ClienteService {
         ;
     }
 
-    public void eliminnarCliente(Long id){
+    public void eliminarCliente(Long id){
        clienteRepository.deleteById(id);
     }
 

@@ -21,7 +21,9 @@ public class VentasService {
     public Venta guardarVenta(Venta venta){
         return ventaMapper
         .ventaEntityToVentaModel(
-            ventaRepository.save(ventaMapper.ventaModelToVentaEntity(venta)))
+            ventaRepository
+            .save(ventaMapper
+                .ventaModelToVentaEntity(venta)))
         ;
     }
     

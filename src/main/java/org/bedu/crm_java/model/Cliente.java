@@ -4,12 +4,10 @@ package org.bedu.crm_java.model;
 import jakarta.validation.constraints.*;
 import lombok.Builder;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 
 @Data
 @Builder
-@RequiredArgsConstructor
 public class Cliente {
     @PositiveOrZero(message = "El identificador no puede ser un número negativo")
     private Long id;
